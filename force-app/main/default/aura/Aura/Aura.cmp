@@ -1,0 +1,20 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute type="Integer" name="num1"  />
+    <aura:attribute type="Integer" name="num2"  />
+    <aura:attribute type="Integer" name="res"  />
+    <div class="demo-only slds-grid" style="height:15rem;width:80rem">
+    <lightning:card  title="Add Values">
+    <lightning:input type="number" name="input1" label="Enter Num1" placeholder="type here..." value="{!v.num1}"/>
+    <lightning:input type="number" name="input2" label="Enter Num2" placeholder="type here..." value="{!v.num2}"/>
+   <br></br>
+        <lightning:button variant="brand" label=" + "  onclick="{! c.addition }" />
+        <lightning:button variant="brand" label=" - "  onclick="{! c.difference }" />
+        <lightning:button variant="brand" label=" * "  onclick="{! c.product }" />
+        <lightning:button variant="brand" label=" / "  onclick="{! c.divide }" />
+        <lightning:button variant="brand" label=" % "  onclick="{! c.remainder }" />
+        											   <!--Event     c  call -->
+        <br></br>The sum is {! v.res}
+
+    </lightning:card>
+    </div>
+</aura:component>
